@@ -1,0 +1,46 @@
+<div id="boggle-container">
+  <h1>{{title}}</h1>
+  <ul id="board">
+  </ul>
+  <div id="details">
+    <div id="currentWord" >
+      <span id="word">{{currentWord}}</span>
+      <button (click)="submitGuess()" [disabled]="currentWord.length < 1">Submit</button>
+    </div>
+    <div id="score">
+      <span>score: {{score}}</span>
+    </div>
+
+    <div class="guess">
+      <div id="guessCorrect">
+        <span>Correct</span>
+        <ul >
+          <li *ngFor="let word of correctWords">
+            {{word}}
+          </li>
+        </ul>
+      </div>
+
+      <div id="guessWrong">
+        <span>Incorrect</span>
+        <ul >
+          <li *ngFor="let word of incorrectWords">
+            {{word}}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<router-outlet></router-outlet>
