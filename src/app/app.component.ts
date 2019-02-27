@@ -10,7 +10,7 @@ import {HttpClient} from '@angular/common/http';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent implements OnInit {
-  title = 'Boggle';
+  title = 'BOGGLE';
   boardSize = 16;
   // list of dice
   board = [
